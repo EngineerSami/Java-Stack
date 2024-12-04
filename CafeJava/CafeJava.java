@@ -1,4 +1,4 @@
-package com.mycompany.cafejava;
+package CafeJava;
 
 public class CafeJava {
 

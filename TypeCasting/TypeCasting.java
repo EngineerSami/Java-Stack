@@ -1,7 +1,4 @@
-
-
-package com.mycompany.typecasting;
-
+package TypeCasting;
 
 public class TypeCasting {
 

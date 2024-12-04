@@ -1,5 +1,4 @@
-
-package com.mycompany.firstjavaprogram;
+package FirstJavaProgram;
 
 public class FirstJavaProgram {
 
