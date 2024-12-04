@@ -40,12 +40,6 @@ public class TypeCasting {
         System.out.println("Object type (Integer) set to null: " + objInt);
 
         System.out.println("Primitive types cannot be null!\n");
-
-        System.out.println("Summary:");
-        System.out.println("- Explicit Casting: Converts larger types to smaller types (may lose data).");
-        System.out.println("- Implicit Casting: Automatic conversion to larger types (safe).");
-        System.out.println("- Primitive Types: Faster and memory-efficient.");
-        System.out.println("- Object Types: Slower, allow null values, and provide additional methods.");
     }
 }
 
