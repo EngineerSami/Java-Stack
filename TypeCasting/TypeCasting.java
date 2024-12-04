@@ -24,7 +24,7 @@ public class TypeCasting {
             sumObject += j;
         }
         long end1 = System.currentTimeMillis();
-        System.out.println("Object Type Sum: " + sumObject + " (Time: " + (end1 - start1) + " ms)");
+        System.out.println("Object Type Sum: " + sumObject);
 
         long start2 = System.currentTimeMillis();
         int sumPrimitive = 0;
@@ -32,7 +32,7 @@ public class TypeCasting {
             sumPrimitive += j;
         }
         long end2 = System.currentTimeMillis();
-        System.out.println("Primitive Type Sum: " + sumPrimitive + " (Time: " + (end2 - start2) + " ms)\n");
+        System.out.println("Primitive Type Sum: " + sumPrimitive);
 
         System.out.println("Handling null values:");
         Integer objInt = 10;
