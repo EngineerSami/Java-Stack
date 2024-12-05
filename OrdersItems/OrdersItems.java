@@ -1,4 +1,3 @@
-package com.mycompany.ordersitems;
 import java.util.ArrayList;
 
 class Item {
