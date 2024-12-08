@@ -10,7 +10,7 @@ public class Order {
         this.name = name;
         this.total = 0.0;
         this.ready = false;
-        this.items = new ArrayList<>();
+        this.items = new ArrayList<Item>();
     }
 
     public void addItem(Item item) {

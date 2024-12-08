@@ -58,9 +58,9 @@ public class OrdersItems {
         order4.addItem(item2);
         order2.setReady(true);
 
-        System.out.printf("Name: %s, Total: %.2f, Ready: %s\n", order1.name, order1.total, order1.ready);
-        System.out.printf("Name: %s, Total: %.2f, Ready: %s\n", order2.name, order2.total, order2.ready);
-        System.out.printf("Name: %s, Total: %.2f, Ready: %s\n", order3.name, order3.total, order3.ready);
-        System.out.printf("Name: %s, Total: %.2f, Ready: %s\n", order4.name, order4.total, order4.ready);
+        System.out.printf("Name:, Total: , Ready: \n", order1.name, order1.total, order1.ready);
+        System.out.printf("Name: , Total: , Ready: \n", order2.name, order2.total, order2.ready);
+        System.out.printf("Name: , Total: , Ready: \n", order3.name, order3.total, order3.ready);
+        System.out.printf("Name: , Total: , Ready: \n", order4.name, order4.total, order4.ready);
     }
 }
