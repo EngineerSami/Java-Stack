@@ -1,20 +1,18 @@
-package com.mycompany.banktest;
+
 
 public class BankAccount {
-    // MEMBER VARIABLES
+
     private double checkingBalance;
     private double savingsBalance;
     private static int accounts = 0;
     private static double totalMoney = 0.0;
 
-    // CONSTRUCTOR
     public BankAccount() {
         this.checkingBalance = 0.0;
         this.savingsBalance = 0.0;
         accounts++;
     }
 
-    // GETTERS
     public double getCheckingBalance() {
         return this.checkingBalance;
     }
@@ -31,7 +29,6 @@ public class BankAccount {
         return totalMoney;
     }
 
-    // METHODS
     public void deposit(String accountType, double amount) {
         if (amount <= 0) {
             System.out.println("Deposit amount must be positive.");

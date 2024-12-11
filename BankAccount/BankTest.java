@@ -1,6 +1,6 @@
-package com.mycompany.banktest;
 
-   public class BankTest {
+
+public class BankTest {
     public static void main(String[] args) {
         // Create 3 bank accounts
         BankAccount account1 = new BankAccount();
