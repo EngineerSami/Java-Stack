@@ -1,0 +1,21 @@
+
+
+h1 {
+    color: green;
+}
+
+.store-container {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh !important;
+}
+.fruit-table {
+    border: 3vh solid #fab6c2;
+    width: 80vh !important; 
+}
+
+.orange {
+    color: orange;
+}
