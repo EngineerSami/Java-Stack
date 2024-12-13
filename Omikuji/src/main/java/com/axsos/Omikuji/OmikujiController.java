@@ -13,13 +13,11 @@ import jakarta.servlet.http.HttpSession;
 @RequestMapping("/omikuji")
 public class OmikujiController {
 
-    // Route to render the Omikuji form
     @RequestMapping("")
     public String omikujiForm() {
-        return "omikujiForm"; // JSP file name for the form
+        return "omikujiForm"; 
     }
 
-    // Route to handle form submission
     @PostMapping("/process")
     public String processOmikuji(
         @RequestParam("number") int number,
@@ -30,7 +28,6 @@ public class OmikujiController {
         @RequestParam("niceMessage") String niceMessage,
         HttpSession session
     ) {
-        // Save the form data in session
         session.setAttribute("number", number);
         session.setAttribute("city", city);
         session.setAttribute("person", person);
@@ -41,10 +38,8 @@ public class OmikujiController {
         return "redirect:/omikuji/show";
     }
 
-    // Route to render the fortune page
     @RequestMapping("/show")
     public String showOmikuji(HttpSession session, Model model) {
-        // Add session attributes to the model for rendering in JSP
         model.addAttribute("number", session.getAttribute("number"));
         model.addAttribute("city", session.getAttribute("city"));
         model.addAttribute("person", session.getAttribute("person"));
@@ -52,6 +47,6 @@ public class OmikujiController {
         model.addAttribute("livingThing", session.getAttribute("livingThing"));
         model.addAttribute("niceMessage", session.getAttribute("niceMessage"));
 
-        return "omikujiShow"; // JSP file name for the result
+        return "omikujiShow"; 
     }
 }
