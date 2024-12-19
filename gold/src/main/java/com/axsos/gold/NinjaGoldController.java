@@ -62,7 +62,7 @@ public class NinjaGoldController {
         List<String> activities = (List<String>) session.getAttribute("activities");
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMMM d, yyyy h:mm a"));
         activities.add(0, message + " (" + timestamp + ")");
-
+        session.setAttribute("goldern", goldEarned);
         return "redirect:/";
     }
 }

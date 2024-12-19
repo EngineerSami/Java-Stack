@@ -35,8 +35,17 @@
         <div class="activities">
             <h3>Activities:</h3>
             <ul>
-                <c:forEach var="activity" items="${sessionScope.activities}">
-                    <li>${activity}</li>
+                <c:forEach var="activity" items="${sessionScope.activities}" >
+                    <c:choose>
+                <c:when test="${ goldern >= 0 }">
+                    <li style="color: green;" class="pos">${activity}</li>
+                    <br/>
+                </c:when>    
+                <c:otherwise>
+                    <li style="color: red;" class="min">${activity}</li>
+                    <br/>
+                </c:otherwise>
+            </c:choose>
                 </c:forEach>
             </ul>
         </div>
