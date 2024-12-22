@@ -16,12 +16,10 @@ public class BurgerService {
         this.burgerRepository = burgerRepository;
     }
 
-    // Method to get a burger by ID
     public Optional<Burger> getBurgerById(Long id) {
         return burgerRepository.findById(id);
     }
 
-    // Method to update a burger
     @Transactional
     public Burger updateBurger(Long id, String burgerName, String restaurantName, Double rating, String description) {
         Optional<Burger> optionalBurger = burgerRepository.findById(id);
@@ -30,10 +28,10 @@ public class BurgerService {
             burgerToUpdate.setBurgerName(burgerName);
             burgerToUpdate.setRestaurantName(restaurantName);
             burgerToUpdate.setRating(rating);
-            burgerToUpdate.setDescription(description); // Corrected to set the description
+            burgerToUpdate.setDescription(description); 
             return burgerRepository.save(burgerToUpdate);
         } else {
-            return null; // Consider throwing an exception instead
+            return null; 
         }
     }
 

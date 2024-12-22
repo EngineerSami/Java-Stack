@@ -76,9 +76,5 @@ public class BurgerController {
         return "redirect:/burgers";
     }
 
-    @PostMapping("/delete/{id}")
-    public String deleteBurger(@PathVariable Long id) {
-        burgerService.deleteBurger(id);
-        return "redirect:/burgers";
-    }
+    
 }

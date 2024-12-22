@@ -2,11 +2,13 @@ package com.axsosacademy.mvc.controllers;
 
 import com.axsosacademy.mvc.models.Burger;
 import com.axsosacademy.mvc.services.BurgerService;
+
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/api/burgers") 
 public class BurgerApi {
     private final BurgerService burgerService;
@@ -36,7 +38,7 @@ public class BurgerApi {
         return burgerService.findBurger(id);
     }
 
-    @PutMapping("/{id}")
+    @RequestMapping("/{id}")
     public Burger update(
             @PathVariable("id") Long id,
             @RequestParam(value = "burgerName") String burgerName,
@@ -49,8 +51,4 @@ public class BurgerApi {
         return burgerService.updateBurger(updatedBurger);
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id) {
-        burgerService.deleteBurger(id);
-    }
 }

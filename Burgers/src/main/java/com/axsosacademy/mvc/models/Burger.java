@@ -26,8 +26,8 @@ public class Burger {
     private Double rating;
 
     @NotNull
-    @Size(max = 500) // Assuming a maximum length for the description
-    private String description; // New field for description
+    @Size(max = 500) 
+    private String description; 
 
     @Column(updatable = false)
     private Date createdAt;
