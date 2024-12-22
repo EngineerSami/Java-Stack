@@ -6,24 +6,24 @@ import jakarta.validation.constraints.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "burgers")
-public class Burger {
+@Table(name = "Travels")
+public class Travel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     @Size(min = 3, max = 100)
-    private String burgerName;
+    private String expenseName;
 
     @NotNull
     @Size(min = 3, max = 100)
-    private String restaurantName;
+    private String vendor;
 
     @NotNull
-    @Min(1)
-    @Max(5)
-    private Double rating;
+    @Min(0)
+    @Max(300)
+    private Double amount;
 
     @NotNull
     @Size(max = 500) 
@@ -34,12 +34,12 @@ public class Burger {
 
     private Date updatedAt;
 
-    public Burger() {}
+    public Travel() {}
 
-    public Burger(String burgerName, String restaurantName, Double rating, String description) {
-        this.burgerName = burgerName;
-        this.restaurantName = restaurantName;
-        this.rating = rating;
+    public Travel(String expenseName, String vendor, Double amount, String description) {
+        this.expenseName = expenseName;
+        this.vendor = vendor;
+        this.amount = amount;
         this.description = description; 
     }
 
@@ -48,28 +48,28 @@ public class Burger {
         return id;
     }
 
-    public String getBurgerName() {
-        return burgerName;
+    public String getexpenseName() {
+        return expenseName;
     }
 
-    public void setBurgerName(String burgerName) {
-        this.burgerName = burgerName;
+    public void setexpenseName(String expenseName) {
+        this.expenseName = expenseName;
     }
 
-    public String getRestaurantName() {
-        return restaurantName;
+    public String getvendor() {
+        return vendor;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
+    public void setvendor(String vendor) {
+        this.vendor = vendor;
     }
 
-    public Double getRating() {
-        return rating;
+    public Double getamount() {
+        return amount;
     }
 
-    public void setRating(Double rating) {
-        this.rating = rating;
+    public void setamount(Double amount) {
+        this.amount = amount;
     }
 
     public String getDescription() {
